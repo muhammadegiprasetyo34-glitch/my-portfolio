@@ -241,9 +241,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 // Smooth scrolling for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
+  anchor.addEventListener('click', (e) => {
     e.preventDefault();
-    const targetId = this.getAttribute('href');
+    const targetId = anchor.getAttribute('href');
     if (targetId) {
       document.querySelector(targetId)?.scrollIntoView({
         behavior: 'smooth'
